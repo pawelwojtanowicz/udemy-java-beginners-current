@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 //---comparison array and ArrayList---
 
-        String[] stringArray = new String[5];               //--> stringArray [null, null, null, null, null]
-        stringArray[0] = "cat";                             //--> stringArray ["cat", null, null, null, null]
-        stringArray[1] = "dog";                             //--> stringArray ["cat"", "dog", null, null, null]
-        stringArray[2] = "horse";                           //--> stringArray ["cat"", "dog", "horse", null, null]
-        stringArray[1] = null;                              //--> stringArray ["cat"", null, "horse", null, null]
+//        String[] stringArray = new String[5];               //--> stringArray [null, null, null, null, null]
+//        stringArray[0] = "cat";                             //--> stringArray ["cat", null, null, null, null]
+//        stringArray[1] = "dog";                             //--> stringArray ["cat"", "dog", null, null, null]
+//        stringArray[2] = "horse";                           //--> stringArray ["cat"", "dog", "horse", null, null]
+//        stringArray[1] = null;                              //--> stringArray ["cat"", null, "horse", null, null]
 
 
         ArrayList<String> stringArrayList = new ArrayList<String>();    //--> stringArrayList [];
@@ -34,13 +34,21 @@ public class Main {
 
         int sizeBefore = stringArrayList.size();
 
+        for (int i = 0; i < stringArrayList.size(); i++) {
+            String current = stringArrayList.get(i);
+            System.out.println(current);
+
+        }
+
         stringArrayList.clear();                                        //--> stringArrayList [];
 
         int sizeAfter = stringArrayList.size();
 
+
+
         System.out.println(dogNumber + " " + isCat + " " + isFish + " "
-                            + getDog + " " + getFirst + " " + getFirst2 + " "
-                            + sizeBefore + " " + sizeAfter);
+                + getDog + " " + getFirst + " " + getFirst2 + " "
+                + sizeBefore + " " + sizeAfter);
 
     }
 
